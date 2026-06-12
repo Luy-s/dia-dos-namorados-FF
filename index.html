@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernanda ❤️ Luys</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top,#3a0000 0%,#120000 25%,#050505 100%);
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:5rem;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#8b0000;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.section{
+    padding:80px 20px;
+}
+
+.title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#d4af37;
+}
+
+.slider-container{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.slider{
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(212,175,55,.25);
+}
+
+.slides{
+    display:flex;
+    transition:transform .8s ease;
+}
+
+.slide{
+    min-width:100%;
+}
+
+.slide img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+}
+
+.video-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(212,175,55,.15);
+}
+
+.message{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:25px;
+    line-height:1.9;
+    font-size:1.15rem;
+}
+
+.signature{
+    margin-top:25px;
+    text-align:right;
+    font-family:'Dancing Script',cursive;
+    font-size:2rem;
+    color:#d4af37;
+}
+
+.footer{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.footer h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:#d4af37;
+}
+
+.cyborgues-signature{
+    margin-top:50px;
+    opacity:.65;
+}
+
+.cyborgues-signature img{
+    width:80px;
+    margin-bottom:15px;
+}
+
+.machines-love{
+    color:#d4af37;
+    letter-spacing:4px;
+    font-size:.9rem;
+}
+
+.cyborgues-credit{
+    margin-top:8px;
+    font-size:.8rem;
+    opacity:.7;
+}
+
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#8b0000;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:999;
+}
+
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    color:#8b0000;
+    opacity:.35;
+    animation:float linear forwards;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-20vh);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.slide img{
+    height:420px;
+}
+
+.message{
+    font-size:1rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<audio id="music" loop>
+    <source src="planos-do-bk.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+```
+<h1>Fernanda ❤️ Luys</h1>
+
+<p>
+    Algumas pessoas entram na nossa vida e deixam tudo mais leve.
+    Você é exatamente isso para mim.
+</p>
+
+<button class="btn" onclick="startExperience()">
+    Abrir Nossa História ✨
+</button>
+```
+
+</section>
+
+<section class="section">
+
+```
+<h2 class="title">Nossos Momentos 📸</h2>
+
+<div class="slider-container">
+
+    <div class="slider">
+
+        <div class="slides" id="slides">
+
+            <div class="slide"><img src="Fotos/foto1.jpg"></div>
+            <div class="slide"><img src="Fotos/foto2.jpg"></div>
+            <div class="slide"><img src="Fotos/foto3.jpg"></div>
+            <div class="slide"><img src="Fotos/foto4.jpg"></div>
+            <div class="slide"><img src="Fotos/foto5.jpg"></div>
+            <div class="slide"><img src="Fotos/foto6.jpg"></div>
+            <div class="slide"><img src="Fotos/foto7.jpg"></div>
+            <div class="slide"><img src="Fotos/foto8.jpg"></div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="section">
+
+```
+<h2 class="title">Nossos Vídeos 🎥</h2>
+
+<div class="video-grid">
+
+    <video controls><source src="Fotos/video1.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video2.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video3.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video4.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video5.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video6.mp4" type="video/mp4"></video>
+    <video controls><source src="Fotos/video7.mp4" type="video/mp4"></video>
+
+</div>
+```
+
+</section>
+
+<section class="section">
+
+```
+<h2 class="title">Uma Mensagem ❤️</h2>
+
+<div class="message">
+
+    Amor,
+
+    <br><br>
+
+    Você transforma meus dias comuns em dias felizes.
+
+    <br><br>
+
+    Entre o trabalho, os projetos, os desafios e toda a correria da vida,
+    é você quem me faz esquecer dos problemas.
+
+    <br><br>
+
+    Obrigado por cada sorriso, cada abraço,
+    cada mensagem inesperada e por fazer do meu dia.
+
+    <br><br>
+
+    Não sei exatamente o que o futuro reserva,
+    mas sei que quero continuar construindo planos,
+    colecionando momentos e escrevendo novos capítulos ao seu lado.
+
+    <div class="signature">
+        — Luys ❤️
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="footer">
+
+```
+<h2>Fernanda ❤️ Luys</h2>
+
+<p>
+    Que esta seja apenas uma das muitas páginas da nossa história.
+</p>
+
+<div class="cyborgues-signature">
+
+    <img src="cyborgues.png" alt="CYBORGUES">
+
+    <p class="machines-love">
+        MÁQUINAS IN LOVE ❤️
+    </p>
+
+    <p class="cyborgues-credit">
+        By Luy
+    </p>
+
+</div>
+```
+
+</section>
+
+<script>
+
+function startExperience(){
+
+    document.querySelector('.section')
+    .scrollIntoView({behavior:'smooth'});
+
+    document.getElementById('music')
+    .play()
+    .catch(()=>{});
+
+}
+
+function toggleMusic(){
+
+    const music = document.getElementById('music');
+
+    if(music.paused){
+        music.play();
+    }else{
+        music.pause();
+    }
+
+}
+
+let current = 0;
+
+const slides = document.getElementById('slides');
+
+const total = document.querySelectorAll('.slide').length;
+
+setInterval(()=>{
+
+    current++;
+
+    if(current >= total){
+        current = 0;
+    }
+
+    slides.style.transform =
+    `translateX(-${current * 100}%)`;
+
+},4000);
+
+function createHeart(){
+
+    const heart = document.createElement('div');
+
+    heart.classList.add('heart');
+
+    heart.innerHTML='❤';
+
+    heart.style.left=Math.random()*100+'%';
+
+    heart.style.fontSize=
+    (10+Math.random()*25)+'px';
+
+    heart.style.animationDuration=
+    (5+Math.random()*8)+'s';
+
+    document.getElementById('hearts')
+    .appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },13000);
+
+}
+
+setInterval(createHeart,700);
+
+</script>
+
+</body>
+</html>
